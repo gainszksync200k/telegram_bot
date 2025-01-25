@@ -4,6 +4,8 @@ import logging
 from telegram import Bot
 from aiohttp import ClientSession
 
+# Ваш API с езер скана
+GAS_API = "YOUR_GAS_API"
 
 # Ваш API токен
 TOKEN = "YOUR_BOT_API" # УКАЖИТЕ СЮДА АПИ ПОЛУЧЕНЫЙ В ШАГЕ 2.
@@ -86,7 +88,7 @@ async def get_prices():
                 logger.error(f"Ошибка при запросе индекса страха и жадности: {response.status}")
 
         # Запрос GAS PRICE
-        api_key = "YC33Z9NA3RKC4WRT3JA3A2M7KZTEHTEBMV"
+        api_key = GAS_API
         async with session.get(f"https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey={api_key}") as response:
             if response.status == 200:
                 data = await response.json()
