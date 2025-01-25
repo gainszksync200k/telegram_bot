@@ -164,7 +164,7 @@ async def main():
     message = (
         f"ЦЕНА ETH: {prices[0]:.2f} USD\n\n"
         f"ЦЕНА BTC: {prices[1]:.2f} USD\n\n"
-        f"ЦЕНА USDT: +-{prices[2] + 1.6:.2f} RUB\n\n"
+        f"ЦЕНА USDT: +-{prices[2] + 2.1:.2f} RUB\n\n"
         f"Значение страха {prices[3]} и уровень страха {prices[4]}\n\n"
         f"GAS PRICE = {prices[5]}\n\n"
         f"Доминация BTC {prices[6]:.2f}\n\n"
