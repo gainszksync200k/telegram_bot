@@ -18,7 +18,7 @@ TIME = 5 # Я СДЕЛАЛ 5 МИНУТ, МОЖНО РЕЖЕ, НО НЕ МЕНЬ
 # НУЖНО ЗАПОЛНИТЬ ПО ПРИМЕРУ НИЖЕ. ПОЛУЧИТЬ ВЕРНЫЙ ТИКЕТ МОЖНО ТУТ https://www.coingecko.com/en/coins/shiba-inu
 # В ДАННОМ СЛУЧАЕ ДЛЯ ШИБЫ ЭТО БУДЕТ  shiba-inu .  ДЛЯ ЭФИРА ethereum
 # ПОСЛЕ ДВОЕТОЧИЯ СУММА ВАШЕГО АКТИВА
-portfolio = {
+tokens = {
     "ethereum": 20.54,  # ETH , ЕГО КОЛИЧЕСТВО
     "internet-computer": 1231,  # ICP
     "chainlink": 348,  # LINK
@@ -127,7 +127,7 @@ async def portfolio():
                     raise Exception(f"Ошибка при запросе к API: {response.status}")
 
     # Портфель: словарь с названием криптовалюты и её количеством
-    portfolio = portfolio
+    portfolio = tokens
 
     # Получаем текущие цены для криптовалют в портфеле
     prices = await get_crypto_prices(portfolio.keys())
